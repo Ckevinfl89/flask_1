@@ -5,10 +5,8 @@ from flask import render_template
 @app.route('/')
 def index():
     countries = ['United States', 'Canada', 'Mexico', 'France', 'Egypt', 'China']
-    return render_template('index.html', first_name='David', countries=countries)
+    return render_template('index.html', first_name='Christian', countries=countries)
 
-@app.route('/new')
-def new():
-    name = 'Christian' + ' ' + 'Sanabria'
-    return f'This is a new route! How are you, {name}?'
-
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
